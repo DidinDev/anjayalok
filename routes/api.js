@@ -1080,7 +1080,7 @@ router.get('/maker/circle', async (req, res) => {
 	var text = req.query.url
 	if (!text ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter url"})
 	var img = await isImageURL(text)
-	if ( !img ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image"}) 
+	if ( !img ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image"}) 
 
 	const hasil =  await Canvacord.Canvas.circle(text);
 	res.set({'Content-Type': 'image/png'})
@@ -1093,7 +1093,7 @@ router.get('/maker/beautiful', async (req, res) => {
 	var text = req.query.url
 	if (!text ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter url"})
 	var img = await isImageURL(text)
-	if ( !img ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image"}) 
+	if ( !img ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image"}) 
 
 	const hasil =  await Canvacord.Canvas.beautiful(text);
 	res.set({'Content-Type': 'image/png'})
@@ -1106,7 +1106,7 @@ router.get('/maker/blur', async (req, res) => {
 	var text = req.query.url
 	if (!text ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter url"})
 	var img = await isImageURL(text)
-	if ( !img ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image"}) 
+	if ( !img ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image"}) 
 
 	const hasil =  await Canvacord.Canvas.blur(text)
 	res.set({'Content-Type': 'image/png'})
@@ -1123,8 +1123,8 @@ router.get('/maker/darkness', async (req, res) => {
 
 	var img = await isImageURL(text)
 	var n = isNumber(no)
-	if ( !img ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image"}) 
-	if ( !n ) return res.json({ status : false, creator : 'Alip', message : "[!] parameter no nombor sahaja"}) 
+	if ( !img ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image"}) 
+	if ( !n ) return res.json({ status : false, creator : 'didin', message : "[!] parameter no nombor sahaja"}) 
 
 
 	const hasil =  await Canvacord.Canvas.darkness(text,shortText(no, 3))
@@ -1137,7 +1137,7 @@ router.get('/maker/facepalm', async (req, res) => {
 	var text = req.query.url
 	if (!text ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter url"})
 	var img = await isImageURL(text)
-	if ( !img ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image"}) 
+	if ( !img ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image"}) 
 
 	const hasil =  await Canvacord.Canvas.facepalm(text)
 	res.set({'Content-Type': 'image/png'})
@@ -1149,7 +1149,7 @@ router.get('/maker/invert', async (req, res) => {
 	var text = req.query.url
 	if (!text ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter url"})
 	var img = await isImageURL(text)
-	if ( !img ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image"}) 
+	if ( !img ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image"}) 
 
 	const hasil =  await Canvacord.Canvas.invert(text)
 	res.set({'Content-Type': 'image/png'})
@@ -1165,8 +1165,8 @@ router.get('/maker/pixelate', async (req, res) => {
 
 	var img = await isImageURL(text)
 	var n = isNumber(no)
-	if ( !img ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image"}) 
-	if ( !n ) return res.json({ status : false, creator : 'Alip', message : "[!] parameter no nombor sahaja"}) 
+	if ( !img ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image"}) 
+	if ( !n ) return res.json({ status : false, creator : 'didin', message : "[!] parameter no nombor sahaja"}) 
 
 
 	const hasil =  await Canvacord.Canvas.pixelate(text,convertStringToNumber(no))
@@ -1180,7 +1180,7 @@ router.get('/maker/rainbow', async (req, res) => {
 	var text = req.query.url
 	if (!text ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter url"})
 	var img = await isImageURL(text)
-	if ( !img ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image"}) 
+	if ( !img ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image"}) 
 
 	const hasil =  await Canvacord.Canvas.rainbow(text)
 	res.set({'Content-Type': 'image/png'})
@@ -1205,9 +1205,9 @@ router.get('/maker/resize', async (req, res) => {
 	var img = await isImageURL(text)
 	var wid = isNumber(width)
 	var hei = isNumber(height)
-	if ( !img ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image"}) 
-	if ( !wid ) return res.json({ status : false, creator : 'Alip', message : "[!] parameter width nombor sahaja"}) 
-	if ( !hei ) return res.json({ status : false, creator : 'Alip', message : "[!] parameter height nombor sahaja"}) 
+	if ( !img ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image"}) 
+	if ( !wid ) return res.json({ status : false, creator : 'didin', message : "[!] parameter width nombor sahaja"}) 
+	if ( !hei ) return res.json({ status : false, creator : 'didin', message : "[!] parameter height nombor sahaja"}) 
 
 	const hasil =  await Canvacord.Canvas.resize(text, convertStringToNumber(w),  convertStringToNumber(h))
 	res.set({'Content-Type': 'image/png'})
@@ -1219,7 +1219,7 @@ router.get('/maker/trigger', async (req, res) => {
 	var text = req.query.url
 	if (!text ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter url"})
 	var img = await isImageURL(text)
-	if ( !img ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image"}) 
+	if ( !img ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image"}) 
 
 	const hasil =  await Canvacord.Canvas.trigger(text)
 	res.set({'Content-Type': 'gif'})
@@ -1231,7 +1231,7 @@ router.get('/maker/wanted', async (req, res) => {
 	var text = req.query.url
 	if (!text ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter url"})
 	var img = await isImageURL(text)
-	if ( !img ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image"}) 
+	if ( !img ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image"}) 
 
 	const hasil =  await Canvacord.Canvas.wanted(text)
 	res.set({'Content-Type': 'image/png'})
@@ -1243,7 +1243,7 @@ router.get('/maker/wasted', async (req, res) => {
 	var text = req.query.url
 	if (!text ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter url"})
 	var img = await isImageURL(text)
-	if ( !img ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image"}) 
+	if ( !img ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image"}) 
 
 	const hasil =  await Canvacord.Canvas.wasted(text)
 	res.set({'Content-Type': 'image/png'})
@@ -1375,14 +1375,14 @@ router.get('/maker/welcome1', async (req, res, next) => {
 	var imgpp = await isImageURL(pp)
 	var bgimg = await isImageURL(bg)
 
-    if (!name ) return res.json({ status : false, creator : 'Alip', message : "[!] masukan parameter name"})  
-	if (!grup ) return res.json({ status : false, creator : 'Alip', message : "[!] masukan parameter gpname"})  
-    if (!member ) return res.json({ status : false, creator : 'Alip', message : "[!] masukan parameter member"})  
-	if (!pp ) return res.json({ status : false, creator : 'Alip', message : "[!] masukan parameter pp"})  
-    if (!bg ) return res.json({ status : false, creator : 'Alip', message : "[!] masukan parameter bg"})  
+    if (!name ) return res.json({ status : false, creator : 'didin', message : "[!] masukan parameter name"})  
+	if (!grup ) return res.json({ status : false, creator : 'didin', message : "[!] masukan parameter gpname"})  
+    if (!member ) return res.json({ status : false, creator : 'didin', message : "[!] masukan parameter member"})  
+	if (!pp ) return res.json({ status : false, creator : 'didin', message : "[!] masukan parameter pp"})  
+    if (!bg ) return res.json({ status : false, creator : 'didin', message : "[!] masukan parameter bg"})  
 
-	if ( !imgpp ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image pp"}) 
-	if ( !bgimg ) return res.json({ status : false, creator : 'Alip', message : "[!] cek kembali url image bg"}) 
+	if ( !imgpp ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image pp"}) 
+	if ( !bgimg ) return res.json({ status : false, creator : 'didin', message : "[!] cek kembali url image bg"}) 
    
     Canvas.registerFont('./asset/font/Creme.ttf', { family: 'creme' })
 
@@ -1448,14 +1448,14 @@ router.get('/maker/goodbye1', async (req, res, next) => {
 	var imgpp = await isImageURL(pp)
 	var bgimg = await isImageURL(bg)
 
-    if (!name ) return res.json({ status : false, creator : 'Alip', message : "[!] masukan parameter name"})  
-	if (!grup ) return res.json({ status : false, creator : 'Alip', message : "[!] masukan parameter gpname"})  
-    if (!member ) return res.json({ status : false, creator : 'Alip', message : "[!] masukan parameter member"})  
-    if (!bg ) return res.json({ status : false, creator : 'Alip', message : "[!] masukan parameter bg"})  
-	if (!pp) return res.json({ status : false, creator : 'Alip', message : "[!] masukan parameter pp"}) 
+    if (!name ) return res.json({ status : false, creator : 'didin', message : "[!] masukan parameter name"})  
+	if (!grup ) return res.json({ status : false, creator : 'didin', message : "[!] masukan parameter gpname"})  
+    if (!member ) return res.json({ status : false, creator : 'didin', message : "[!] masukan parameter member"})  
+    if (!bg ) return res.json({ status : false, creator : 'didin', message : "[!] masukan parameter bg"})  
+	if (!pp) return res.json({ status : false, creator : 'didin', message : "[!] masukan parameter pp"}) 
    
-	if ( !imgpp ) return res.json({ status : false, creator : 'Alip', message : "[!] masukan parameter pp Link pp dengan betul"}) 
-	if ( !bgimg ) return res.json({ status : false, creator : 'Alip', message : "[!] masukan parameter pp Link bg dengan betul"}) 
+	if ( !imgpp ) return res.json({ status : false, creator : 'didin', message : "[!] masukan parameter pp Link pp dengan betul"}) 
+	if ( !bgimg ) return res.json({ status : false, creator : 'didin', message : "[!] masukan parameter pp Link bg dengan betul"}) 
 
     Canvas.registerFont('./asset/font/Creme.ttf', { family: 'creme' })
 

@@ -225,9 +225,6 @@ router.get('/dowloader/telesticker', async (req, res, next) => {
 //ASUPAN//
 // Asupan
 router.get('/asupan/random', async (req, res, next) => {
-        var apikey = req.query.apikey
-		if (!apikey) return res.json(loghandler.notapikey)
-        if(listkey.includes(apikey)){
         fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/random.json`))
         .then(response => response.json())
         .then(async data => {
@@ -246,9 +243,6 @@ router.get('/asupan/random', async (req, res, next) => {
 }
 })
 router.get('/asupan/santuy', async (req, res, next) => {
-        var apikey = req.query.apikey
-		if (!apikey) return res.json(loghandler.notapikey)
-        if(listkey.includes(apikey)){
         fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/santuy.json`))
         .then(response => response.json())
         .then(async data => {
@@ -267,9 +261,6 @@ router.get('/asupan/santuy', async (req, res, next) => {
 }
 })
 router.get('/asupan/bocil', async (req, res, next) => {
-        var apikey = req.query.apikey
-		if (!apikey) return res.json(loghandler.notapikey)
-        if(listkey.includes(apikey)){
         fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/bocil.json`))
         .then(response => response.json())
         .then(async data => {
@@ -288,9 +279,6 @@ router.get('/asupan/bocil', async (req, res, next) => {
 }
 })
 router.get('/asupan/ukhty', async (req, res, next) => {
-        var apikey = req.query.apikey
-		if (!apikey) return res.json(loghandler.notapikey)
-        if(listkey.includes(apikey)){
         fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/ukhty.json`))
         .then(response => response.json())
         .then(async data => {
@@ -309,9 +297,6 @@ router.get('/asupan/ukhty', async (req, res, next) => {
 }
 })
 router.get('/asupan/hijaber', async (req, res, next) => {
-        var apikey = req.query.apikey
-		if (!apikey) return res.json(loghandler.notapikey)
-        if(listkey.includes(apikey)){
         fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/hijaber.json`))
         .then(response => response.json())
         .then(async data => {
@@ -330,9 +315,6 @@ router.get('/asupan/hijaber', async (req, res, next) => {
 }
 })
 router.get('/asupan/gheayubi', async (req, res, next) => {
-        var apikey = req.query.apikey
-		if (!apikey) return res.json(loghandler.notapikey)
-        if(listkey.includes(apikey)){
         fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/gheayubi.json`))
         .then(response => response.json())
         .then(async data => {
@@ -352,9 +334,6 @@ router.get('/asupan/gheayubi', async (req, res, next) => {
 })
 
 router.get('/asupan/rikagusriani', async (req, res, next) => {
-        var apikey = req.query.apikey
-		if (!apikey) return res.json(loghandler.notapikey)
-        if(listkey.includes(apikey)){
         fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/rikagusriani.json`))
         .then(response => response.json())
         .then(async data => {

@@ -19,6 +19,9 @@ const Canvacord = require("canvacord");
 const isNumber = require('is-number');
 var router = express.Router()
 
+// Apikey
+var listkey = ["didinxc","9286c1a775","9267ic6a0f1","927j59de9c","921n567ea6","921h5a4282","925n2c494","928b0323c9","927b0k3hp7o2","925b04ib0j","023l1qhbpk","92b1a0h7ts","92a70b789c","9291a7bk0p1","92a7o8pe9c","92y1a7l0a6","9221a7i9h2","921a7k3n94","92a0kk2bc9","921a7l9pho2","92a2n1kb0j","92b0a75k6f","92u1a7pr8s"];
+var listkeyprem = ["kontol"];
 
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Info  ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
 //  >Creator Alip MY
@@ -43,6 +46,156 @@ var router = express.Router()
 // >Islamic
 //
 //
+// Asupan
+router.get('/asupan/random', async (req, res, next) => {
+        var apikey = req.query.apikey
+		if (!apikey) return res.json(loghandler.notapikey)
+        if(listkey.includes(apikey)){
+        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/random.json`))
+        .then(response => response.json())
+        .then(async data => {
+        var result = data[Math.floor(Math.random() * data.length)];
+        var buffer = result.url;
+         data = await fetch(buffer).then(v => v.buffer())
+         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
+        res.sendFile(__path+'/tmp/video.mp4')
+         })
+         .catch(e => {
+         	console.log(e);
+         	res.json(loghandler.error)
+})
+} else {
+  res.json(loghandler.notapikey)
+}
+})
+router.get('/asupan/santuy', async (req, res, next) => {
+        var apikey = req.query.apikey
+		if (!apikey) return res.json(loghandler.notapikey)
+        if(listkey.includes(apikey)){
+        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/santuy.json`))
+        .then(response => response.json())
+        .then(async data => {
+        var result = data[Math.floor(Math.random() * data.length)];
+        var buffer = result.url;
+         data = await fetch(buffer).then(v => v.buffer())
+         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
+        res.sendFile(__path+'/tmp/video.mp4')
+         })
+         .catch(e => {
+         	console.log(e);
+         	res.json(loghandler.error)
+})
+} else {
+  res.json(loghandler.notapikey)
+}
+})
+router.get('/asupan/bocil', async (req, res, next) => {
+        var apikey = req.query.apikey
+		if (!apikey) return res.json(loghandler.notapikey)
+        if(listkey.includes(apikey)){
+        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/bocil.json`))
+        .then(response => response.json())
+        .then(async data => {
+        var result = data[Math.floor(Math.random() * data.length)];
+        var buffer = result.url;
+         data = await fetch(buffer).then(v => v.buffer())
+         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
+        res.sendFile(__path+'/tmp/video.mp4')
+         })
+         .catch(e => {
+         	console.log(e);
+         	res.json(loghandler.error)
+})
+} else {
+  res.json(loghandler.notapikey)
+}
+})
+router.get('/asupan/ukhty', async (req, res, next) => {
+        var apikey = req.query.apikey
+		if (!apikey) return res.json(loghandler.notapikey)
+        if(listkey.includes(apikey)){
+        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/ukhty.json`))
+        .then(response => response.json())
+        .then(async data => {
+        var result = data[Math.floor(Math.random() * data.length)];
+        var buffer = result.url;
+         data = await fetch(buffer).then(v => v.buffer())
+         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
+        res.sendFile(__path+'/tmp/video.mp4')
+         })
+         .catch(e => {
+         	console.log(e);
+         	res.json(loghandler.error)
+})
+} else {
+  res.json(loghandler.notapikey)
+}
+})
+router.get('/asupan/hijaber', async (req, res, next) => {
+        var apikey = req.query.apikey
+		if (!apikey) return res.json(loghandler.notapikey)
+        if(listkey.includes(apikey)){
+        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/hijaber.json`))
+        .then(response => response.json())
+        .then(async data => {
+        var result = data[Math.floor(Math.random() * data.length)];
+        var buffer = result.url;
+         data = await fetch(buffer).then(v => v.buffer())
+         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
+        res.sendFile(__path+'/tmp/video.mp4')
+         })
+         .catch(e => {
+         	console.log(e);
+         	res.json(loghandler.error)
+})
+} else {
+  res.json(loghandler.notapikey)
+}
+})
+router.get('/asupan/gheayubi', async (req, res, next) => {
+        var apikey = req.query.apikey
+		if (!apikey) return res.json(loghandler.notapikey)
+        if(listkey.includes(apikey)){
+        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/gheayubi.json`))
+        .then(response => response.json())
+        .then(async data => {
+        var result = data[Math.floor(Math.random() * data.length)];
+        var buffer = result.url;
+         data = await fetch(buffer).then(v => v.buffer())
+         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
+        res.sendFile(__path+'/tmp/video.mp4')
+         })
+         .catch(e => {
+         	console.log(e);
+         	res.json(loghandler.error)
+})
+} else {
+  res.json(loghandler.notapikey)
+}
+})
+
+router.get('/asupan/rikagusriani', async (req, res, next) => {
+        var apikey = req.query.apikey
+		if (!apikey) return res.json(loghandler.notapikey)
+        if(listkey.includes(apikey)){
+        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/rikagusriani.json`))
+        .then(response => response.json())
+        .then(async data => {
+        var result = data[Math.floor(Math.random() * data.length)];
+        var buffer = result.url;
+         data = await fetch(buffer).then(v => v.buffer())
+         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
+        res.sendFile(__path+'/tmp/video.mp4')
+         })
+         .catch(e => {
+         	console.log(e);
+         	res.json(loghandler.error)
+})
+} else {
+  res.json(loghandler.notapikey)
+}
+})
+
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Dowloader  ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
 
 
@@ -220,136 +373,6 @@ router.get('/dowloader/telesticker', async (req, res, next) => {
          .catch(e => {
 	 res.json(loghandler.error)
 })
-})
-
-//ASUPAN//
-// Asupan
-router.get('/asupan/random', async (req, res, next) => {
-        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/random.json`))
-        .then(response => response.json())
-        .then(async data => {
-        var result = data[Math.floor(Math.random() * data.length)];
-        var buffer = result.url;
-         data = await fetch(buffer).then(v => v.buffer())
-         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
-        res.sendFile(__path+'/tmp/video.mp4')
-         })
-         .catch(e => {
-         	console.log(e);
-         	res.json(loghandler.error)
-})
-} else {
-  res.json(loghandler.notapikey)
-}
-})
-router.get('/asupan/santuy', async (req, res, next) => {
-        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/santuy.json`))
-        .then(response => response.json())
-        .then(async data => {
-        var result = data[Math.floor(Math.random() * data.length)];
-        var buffer = result.url;
-         data = await fetch(buffer).then(v => v.buffer())
-         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
-        res.sendFile(__path+'/tmp/video.mp4')
-         })
-         .catch(e => {
-         	console.log(e);
-         	res.json(loghandler.error)
-})
-} else {
-  res.json(loghandler.notapikey)
-}
-})
-router.get('/asupan/bocil', async (req, res, next) => {
-        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/bocil.json`))
-        .then(response => response.json())
-        .then(async data => {
-        var result = data[Math.floor(Math.random() * data.length)];
-        var buffer = result.url;
-         data = await fetch(buffer).then(v => v.buffer())
-         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
-        res.sendFile(__path+'/tmp/video.mp4')
-         })
-         .catch(e => {
-         	console.log(e);
-         	res.json(loghandler.error)
-})
-} else {
-  res.json(loghandler.notapikey)
-}
-})
-router.get('/asupan/ukhty', async (req, res, next) => {
-        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/ukhty.json`))
-        .then(response => response.json())
-        .then(async data => {
-        var result = data[Math.floor(Math.random() * data.length)];
-        var buffer = result.url;
-         data = await fetch(buffer).then(v => v.buffer())
-         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
-        res.sendFile(__path+'/tmp/video.mp4')
-         })
-         .catch(e => {
-         	console.log(e);
-         	res.json(loghandler.error)
-})
-} else {
-  res.json(loghandler.notapikey)
-}
-})
-router.get('/asupan/hijaber', async (req, res, next) => {
-        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/hijaber.json`))
-        .then(response => response.json())
-        .then(async data => {
-        var result = data[Math.floor(Math.random() * data.length)];
-        var buffer = result.url;
-         data = await fetch(buffer).then(v => v.buffer())
-         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
-        res.sendFile(__path+'/tmp/video.mp4')
-         })
-         .catch(e => {
-         	console.log(e);
-         	res.json(loghandler.error)
-})
-} else {
-  res.json(loghandler.notapikey)
-}
-})
-router.get('/asupan/gheayubi', async (req, res, next) => {
-        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/gheayubi.json`))
-        .then(response => response.json())
-        .then(async data => {
-        var result = data[Math.floor(Math.random() * data.length)];
-        var buffer = result.url;
-         data = await fetch(buffer).then(v => v.buffer())
-         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
-        res.sendFile(__path+'/tmp/video.mp4')
-         })
-         .catch(e => {
-         	console.log(e);
-         	res.json(loghandler.error)
-})
-} else {
-  res.json(loghandler.notapikey)
-}
-})
-
-router.get('/asupan/rikagusriani', async (req, res, next) => {
-        fetch(encodeURI(`https://raw.githubusercontent.com/Danzzxcodes/scraper/main/asupan/rikagusriani.json`))
-        .then(response => response.json())
-        .then(async data => {
-        var result = data[Math.floor(Math.random() * data.length)];
-        var buffer = result.url;
-         data = await fetch(buffer).then(v => v.buffer())
-         await fs.writeFileSync(__path +'/tmp/video.mp4', data)
-        res.sendFile(__path+'/tmp/video.mp4')
-         })
-         .catch(e => {
-         	console.log(e);
-         	res.json(loghandler.error)
-})
-} else {
-  res.json(loghandler.notapikey)
-}
 })
 
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Text Pro  ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
